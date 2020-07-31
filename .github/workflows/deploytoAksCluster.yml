@@ -3,21 +3,8 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    
     - uses: actions/checkout@master
     
-    - uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-    - name: Create ACR
-      id: create-acr
-      run: |
-        az acr create -n CodeAcademy2020Rekisteri -g CodeAcademy2020Rekisteribe50-rg --location "East US" --sku Standard --admin-enabled
-        echo "::set-output name=acr_username::`az acr credential show -n CodeAcademy2020Rekisteri --query username | xargs`"
-        echo "::set-output name=acr_password::`az acr credential show -n CodeAcademy2020Rekisteri --query passwords[0].value | xargs`"
-        echo "::add-mask::`az acr credential show -n CodeAcademy2020Rekisteri --query passwords[0].value | xargs`"
-
     - uses: azure/docker-login@v1
       with:
         login-server: codeacademy2020rekisteri.azurecr.io
