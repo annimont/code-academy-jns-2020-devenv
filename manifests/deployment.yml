@@ -1,9 +1,12 @@
-apiVersion : apps/v1beta1
+apiVersion : apps/v1
 kind: Deployment
 metadata:
   name: "codeacademy2020cluster-766f"
 spec:
   replicas: 2
+  selector:
+    matchLabels:
+      app: "codeacademy2020cluster-766f"
   template:
     metadata:
       labels:
