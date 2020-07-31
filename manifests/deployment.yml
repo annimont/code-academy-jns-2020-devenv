@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: "codeacademy2020userservice"
-          image: "codeacademy2020registerantti.azurecr.io/codeacademy2020userservice"
+          image: "codeacademy2020rekisteri.azurecr.io/codeacademy2020userservice"
           env:
             - name: MONGO_HOST
               value: "codeacademy2020mongo"
@@ -66,6 +66,6 @@ spec:
     spec:
       containers:
         - name: "codeacademy2020fashionservice"
-          image: "codeacademy2020registerantti.azurecr.io/codeacademy2020fashionservice"
+          image: "codeacademy2020rekisteri.azurecr.io/codeacademy2020fashionservice"
           ports:
             - containerPort: 8000
