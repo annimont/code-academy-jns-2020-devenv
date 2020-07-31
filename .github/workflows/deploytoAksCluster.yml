@@ -42,7 +42,7 @@ jobs:
        
     - uses: azure/k8s-deploy@v1
       with:
-        namespace: codeacademy2020cluster7bec
+        namespace: codeacademy2020cluster7e3f
         manifests: |
           manifests/deployment.yml
           manifests/service.yml
