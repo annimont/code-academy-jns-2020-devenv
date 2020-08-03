@@ -89,13 +89,13 @@ spec:
           image: "codeacademy2020rekisteri.azurecr.io/codeacademy2020libraryservice"
           env:
             - name: POSTGRES_USER
-              value: "postgres"
+              value: "postgres@codeacademy2020postgresanni"
             - name: POSTGRES_PASS
               value: "password"
             - name: POSTGRES_HOST
               value: "codeacademy2020postgresanni.postgres.database.azure.com"
             - name: POSTGRES_PORT
-              value: 5432
+              value: "5432"
             - name: POSTGRES_DB
               value: "library"
           ports:
