@@ -91,7 +91,7 @@ spec:
             - name: POSTGRES_USER
               value: "postgres@codeacademy2020postgresanni"
             - name: POSTGRES_PASS
-              value: "password"
+              value: "password!1"
             - name: POSTGRES_HOST
               value: "codeacademy2020postgresanni.postgres.database.azure.com"
             - name: POSTGRES_PORT
